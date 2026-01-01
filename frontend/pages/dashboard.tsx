@@ -20,7 +20,7 @@ export default function Dashboard() {
     <div className="app-shell">
       <aside className="sidebar">
         <h1>
-          FinMind<span style={{ color: "#818cf8" }}>.</span>ai
+          AI Financial Advisor<span style={{ color: "#818cf8" }}></span>
         </h1>
 
         <nav>
