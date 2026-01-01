@@ -1,0 +1,27 @@
+:root {
+  /* Colors */
+  --bg-primary: #020617;
+  --bg-secondary: #020617;
+  --bg-glass: rgba(255, 255, 255, 0.06);
+
+  --border-glass: rgba(255, 255, 255, 0.12);
+
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+
+  --accent-primary: #6366f1;
+  --accent-glow: rgba(99, 102, 241, 0.45);
+
+  /* Radius */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+
+  /* Shadows */
+  --shadow-soft: 0 10px 40px rgba(0, 0, 0, 0.45);
+  --shadow-glow: 0 0 60px rgba(99, 102, 241, 0.35);
+
+  /* Typography */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont;
+}
