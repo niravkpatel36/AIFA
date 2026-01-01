@@ -1,12 +1,16 @@
 import numpy as np
 
-def optimize_portfolio(returns, risk_tolerance):
-    mean_returns = np.mean(returns, axis=0)
-    cov_matrix = np.cov(returns, rowvar=False)
+def rebalance(portfolio, risk):
+    weights = np.array([
+        portfolio["stocks"],
+        portfolio["bonds"],
+        portfolio["cash"]
+    ])
+    target = np.array([0.6, 0.3, 0.1]) * (1 - risk)
+    adjusted = (weights + target) / 2
+    return {
+        "stocks": float(adjusted[0]),
+        "bonds": float(adjusted[1]),
+        "cash": float(adjusted[2])
+    }
 
-    inv_cov = np.linalg.pinv(cov_matrix)
-    weights = inv_cov @ mean_returns
-    weights = weights / np.sum(weights)
-
-    adjusted = weights * (1 - risk_tolerance)
-    return adjusted.tolist()

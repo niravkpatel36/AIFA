@@ -1,13 +1,13 @@
-from fastapi import APIRouter, Depends
-from app.services.ai_advisor import generate_financial_advice
+from fastapi import APIRouter
+from app.services.ai_advisor import generate_advice
 
 router = APIRouter()
 
 @router.post("/")
-def get_advice(payload: dict):
+def advice(payload: dict):
     return {
-        "advice": generate_financial_advice(
-            payload["profile"],
+        "result": generate_advice(
+            payload["user"],
             payload["portfolio"],
             payload["goals"]
         )
